@@ -33,5 +33,5 @@ git pull
 #list branches from remote
 
 git push -u origin head
-git push -u origin (branch_name)
+git push -u -v origin (branch_name)
 
