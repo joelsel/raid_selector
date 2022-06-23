@@ -1,5 +1,8 @@
 git_basics
 
+git log
+#git log will show: head, active branch, inactive branch, past commits, will display how many commits behind the remote is
+
 #creating tags
 
 git tag -a v1.0 -m "message"
