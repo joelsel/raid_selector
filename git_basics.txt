@@ -1,0 +1,34 @@
+git_basics
+
+#creating tags
+
+git tag -a v1.0 -m "message"
+
+git tag -d <tagname>
+#delete tag
+
+git branch
+#show local branches
+
+git branch -a
+#show all local and remote branches
+
+git branch -r
+#show remote branches
+
+git checkout -b (branch_name)
+#create a new branch
+
+git checkout (branch_name)
+
+git remote
+#show connected remote repo
+
+git remote -v
+
+git pull
+#list branches from remote
+
+git push -u origin head
+git push -u origin (branch_name)
+
