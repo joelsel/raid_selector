@@ -1,5 +1,7 @@
 git_basics
 
+git status
+
 #creating tags
 
 git tag -a v1.0 -m "message"
@@ -31,4 +33,6 @@ git pull
 
 git push -u origin head
 git push -u origin (branch_name)
+git push -u -v origin head
+
 
