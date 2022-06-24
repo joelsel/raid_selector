@@ -36,3 +36,5 @@ git push -u origin (branch_name)
 git push -u -v origin head
 
 
+git push --dry-run --tags origin
+#careful, check which tags are getting pushed
