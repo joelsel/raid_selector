@@ -28,8 +28,8 @@ git remote
 
 git remote -v
 
-git pull
-#list branches from remote
+git pull (-v)
+# updates local repository from remote
 
 git push -u origin head
 git push -u origin (branch_name)
@@ -38,3 +38,6 @@ git push -u -v origin head
 
 git push --dry-run --tags origin
 #careful, check which tags are getting pushed
+
+git config --list --global
+#shows git config global variables
