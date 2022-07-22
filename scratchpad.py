@@ -69,10 +69,53 @@ w.readout()
 # try running the test without the class or def or init first
 
 
-
-a = ["1", "2", "3"]
+"""
+a = ['1', '2', '3']
 b = []
 
 for i in a:
     b.append(i)
-print(f"{b}")
+    print(i)
+#c = list(f"{b}")
+c = f"{b}"
+print(c)
+print(f"c type is {type(c)}")
+
+print(f"a type is {type(a)}")
+print(len(c))
+"""
+
+from importtest import *
+class expac:
+    def __init__ (self, classList, roleList):
+        self.classList = classList
+        self.roleList = roleList
+
+    def readout(self):
+        f"class list includes {self.Classlist}, role list includes {self.roleList}"
+
+expacSelect = input("wrath or legion: ")
+r = []
+if "wrath" in expacSelect:
+    r = Wrath.expacData
+elif "legion" in expacSelect:
+    r = Legion.expacData
+else:
+    print("selection error")
+
+w = expac(r[0], r[1])
+w.readout()
+
+"""
+#constructing expansion data as list
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [a, b]
+print(type(c))
+print(c)  
+print(c[1])
+
+"""
+
+
+

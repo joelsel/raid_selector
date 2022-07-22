@@ -395,3 +395,4 @@ print("\nend of program")
 #TODO 20220617 research __init__, classes , self method
 #TODO 20220718 check exception catcher in write_file, pruning comments from main file, exception catcher for all input statements
 #TODO 20220718 rework RaidReport file open style to 'with open as f'
+#TODO 20220722 rename variables without underscore, use camelcase
