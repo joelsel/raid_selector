@@ -1,5 +1,5 @@
-"""
 
+"""
 class experiment:
     def __init__(self, day, month):
         self.day = day
@@ -11,7 +11,7 @@ class experiment:
 z = experiment("monday", "23")
 z.output()
 """
-
+"""
 class foo:
     def __init__(self, time, day, month):
         self.time = time
@@ -34,5 +34,45 @@ class foo:
 
 bar = foo("testtime", "testday", "testmonth")
 #bar.testing()
-bar.thing()
+bar.testing()
 #working on implementing classes
+"""
+"""
+
+from importtest import odd
+from importtest import even
+
+class number:
+    def __init__(self, first, second, third):
+            self.first = first
+            self.second = second
+            self.third = third
+    
+    def readout(self):
+            f"\n first value = {self.first}\n second value = {self.second}\n third value = {self.third}"
+
+filepick = input("odd or even: ")
+choice = []
+if "odd" in filepick:
+    for i in odd:
+        choice.append(i)
+elif "even" in filepick:
+    for i in even:
+        choice.append(i)
+else:
+    print ("test failed")
+w = number(choice)
+w.readout()
+"""
+
+# need to instatiate a class before you can use it, what does that mean?
+# try running the test without the class or def or init first
+
+
+
+a = ["1", "2", "3"]
+b = []
+
+for i in a:
+    b.append(i)
+print(f"{b}")
