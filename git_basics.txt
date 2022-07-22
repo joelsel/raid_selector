@@ -1,6 +1,10 @@
 git_basics
 
 git status
+#show which files are staged, untracked
+
+git log
+#show log of git commits on current branch
 
 #creating tags
 
@@ -41,3 +45,20 @@ git push --dry-run --tags origin
 
 git config --list --global
 #shows git config global variables
+
+git config -l
+#list git config variables
+
+git config --global credential.helper
+#show credential management process
+
+git config --global credential.helper osxkeychain
+git config --global credential.helper wincred
+#trigger authentication upon next git action
+
+git diff
+#show unstaged changes
+git diff --staged
+#show staged changes
+git diff head
+#show staged/unstaged changes with respect to head
