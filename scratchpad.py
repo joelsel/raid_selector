@@ -92,17 +92,18 @@ class expac:
         self.roleList = roleList
 
     def readout(self):
-        f"class list includes {self.Classlist}, role list includes {self.roleList}"
+       print (f"class list includes {self.classList}, role list includes {self.roleList}")
 
 expacSelect = input("wrath or legion: ")
 r = []
 if "wrath" in expacSelect:
-    r = Wrath.expacData
+    r = Wrath()
 elif "legion" in expacSelect:
-    r = Legion.expacData
+    r = Legion()
 else:
     print("selection error")
-
+print (r)
+print (r[1])
 w = expac(r[0], r[1])
 w.readout()
 

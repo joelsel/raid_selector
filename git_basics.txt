@@ -6,6 +6,9 @@ git status
 git log
 #show log of git commits on current branch
 
+git add -u
+#add modified/deleted files to commit
+
 #creating tags
 
 git tag -a v1.0 -m "message"
