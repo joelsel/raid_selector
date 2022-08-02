@@ -11,6 +11,19 @@ class experiment:
 z = experiment("monday", "23")
 z.output()
 """
+
+"""
+#constructing expansion data as list
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [a, b]
+print(type(c))
+print(c)  
+print(c[1])
+
+"""
+
+
 """
 class foo:
     def __init__(self, time, day, month):
@@ -70,6 +83,7 @@ w.readout()
 
 
 """
+#appending elements to another list, test(failed)
 a = ['1', '2', '3']
 b = []
 
@@ -85,6 +99,8 @@ print(f"a type is {type(a)}")
 print(len(c))
 """
 
+"""
+#testing import function
 from importtest import *
 class expac:
     def __init__ (self, classList, roleList):
@@ -94,6 +110,10 @@ class expac:
     def readout(self):
        print (f"class list includes {self.classList}, role list includes {self.roleList}")
 
+"""
+
+"""
+#passthrough input to secondary file
 expacSelect = input("wrath or legion: ")
 r = []
 if "wrath" in expacSelect:
@@ -106,17 +126,33 @@ print (r)
 print (r[1])
 w = expac(r[0], r[1])
 w.readout()
-
 """
-#constructing expansion data as list
-a = [1, 2, 3]
-b = [4, 5, 6]
-c = [a, b]
-print(type(c))
-print(c)  
-print(c[1])
 
-"""
+#debugging
+
+#print(xpick())
+#print (expacData)
+#print (r[1])
+#w = expac(r[0], r[1])
+#w.readout()
+
+
+#implement read method from reference file, map output to local variable, read nested list element from local variable
+from importtest import *
+
+class expacTest:
+    def __init__ (self, expacData):
+        self.expacData = expacData
+    
+    def readData(self):
+        r = (f"reading class data: {self.expacData[0]}, reading role data: {self.expacData[1]}")
+        r1 = (f"read element 2 of class: {self.expacData[0][1]}, read element 3 of role: {self.expacData[1][2]}")
+        print (r)
+        print (r1)
+
+w = expacTest(xpick())
+w.readData()
+
 
 
 
