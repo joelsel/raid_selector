@@ -1,6 +1,6 @@
 
 def xpick():
-    expacSelect = input("expansions wrath, legion, cata: ")
+    expacSelect = input("Input desired expansion: TBC, Wrath, Cataclysm, Mists, WoD, Legion -: ")
     expacSelect = expacSelect.lower()
     r = []
     if 'tbc' in expacSelect:
@@ -20,41 +20,36 @@ def xpick():
     return r
 
 def TBC():
-    classList = []
-    roleList = []
-    expacData = []
+    classList = ['tbcclass', 'tbcc1', 'tbcc2']
+    roleList = ['tbcrole', 'tbcr1', 'tbcr2']
+    expacData = [classList, roleList]
     return expacData
 
 def Wrath():
-    classList = ['wrathclass', 'c1', 'c2']
-    roleList = ['wrathrole', 'r1', 'r2']
+    classList = ['wrathclass', 'wrathc1', 'wrathc2']
+    roleList = ['wrathrole', 'wrathr1', 'wrathr2']
     expacData = [classList, roleList]
     return expacData
 
 def Cata():
-    classList = ['cataclass', 'c5', 'c6']
-    roleList = ['catarole', 'r5', 'r6']
+    classList = ['cataclass', 'catac1', 'catac2']
+    roleList = ['catarole', 'catar1', 'catar2']
     expacData = [classList, roleList]
     return expacData
 
 def Mists():
-    classList = []
-    roleList = []
-    expacData = []
+    classList = ['mistclass', 'mistc1', 'mistc2']
+    roleList = ['mistrole', 'mistr1', 'mistr2']
+    expacData = [classList, roleList]
     return expacData
 def WOD():
-    classList = []
-    roleList = []
-    expacData = []
-    return expacData
-
-def Legion():
-    classList = ['legionclass', 'c3', 'c4']
-    roleList = ['legionrole', 'r3', 'r4']
+    classList = ['WODclass', 'wodc1', 'wodc2']
+    roleList = ['WODrole', 'wodr1', 'wodr2']
     expacData = [classList, roleList]
     return expacData
 
-
-
-#test = Legion()
-#print(test)
+def Legion():
+    classList = ['legionclass', 'legionc1', 'legionc2']
+    roleList = ['legionrole', 'legionr1', 'legionr2']
+    expacData = [classList, roleList]
+    return expacData

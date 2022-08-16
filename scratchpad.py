@@ -138,15 +138,15 @@ w.readout()
 
 
 #implement read method from reference file, map output to local variable, read nested list element from local variable
-from importtest import *
+from expansionList import *
 
 class expacTest:
     def __init__ (self, expacData):
         self.expacData = expacData
     
     def readData(self):
-        r = (f"reading class data: {self.expacData[0]}, reading role data: {self.expacData[1]}")
-        r1 = (f"read element 2 of class: {self.expacData[0][1]}, read element 3 of role: {self.expacData[1][2]}")
+        r = (f"\nreading class data: {self.expacData[0]}, reading role data: {self.expacData[1]}")
+        r1 = (f"\nread element 2 of class: {self.expacData[0][1]}, read element 3 of role: {self.expacData[1][2]}")
         print (r)
         print (r1)
 
