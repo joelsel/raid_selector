@@ -149,10 +149,14 @@ class expacTest:
         r1 = (f"\nread element 2 of class: {self.expacData[0][1]}, read element 3 of role: {self.expacData[1][2]}")
         print (r)
         print (r1)
+    
+    def testdata(self):
+        r = (f"\n\n whole expac data is: {self.expacData}")
+        print (r)
 
 w = expacTest(xpick())
-w.readData()
-
+#w.readData()
+w.testdata()
 
 
 
