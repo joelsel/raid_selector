@@ -396,3 +396,4 @@ print("\nend of program")
 #TODO 20220718 check exception catcher in write_file, pruning comments from main file, exception catcher for all input statements
 #TODO 20220718 rework RaidReport file open style to 'with open as f'
 #TODO 20220722 rename variables without underscore, use camelcase
+#TODO 20220902 create spec list for each expansion and separate into standalone .py 

@@ -145,13 +145,23 @@ class expacTest:
         self.expacData = expacData
     
     def readData(self):
-        r = (f"\nreading class data: {self.expacData[0]}, reading role data: {self.expacData[1]}")
-        r1 = (f"\nread element 2 of class: {self.expacData[0][1]}, read element 3 of role: {self.expacData[1][2]}")
-        print (r)
-        print (r1)
+        #r = (f"\nreading class data: {self.expacData[0]}, reading role data: {self.expacData[1]}")
+        #r1 = (f"\nread element 2 of class: {self.expacData[0][1]}, read element 3 of role: {self.expacData[1][2]}")
+        #print (r)
+        #print (r1)
+        place
     
     def testdata(self):
-        r = (f"\n\n whole expac data is: {self.expacData}")
+        #r = (f"\n\n whole expac data is: {self.expacData}")
+        r = (f'\n \
+            current classList =   {self.expacData[0]} \n\n \
+            current roleList =    {self.expacData[1]} \n \
+            current class_wt =    {self.expacData[2]} \n \
+            current tank_only =   {self.expacData[3]} \n \
+            current healer_only = {self.expacData[4]} \n \
+            current melee_only =  {self.expacData[5]} \n \
+            current ranged_only = {self.expacData[6]} \n \
+            ')
         print (r)
 
 w = expacTest(xpick())

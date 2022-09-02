@@ -11,16 +11,22 @@ def xpick():
     legion_match = ['legion']
     if any(x in expacSelect for x in tbc_match):
         r = TBC()
+        print (f"\nexpansion chosen was TBC due to {expacSelect} inside TBC keyword list\n")
     elif any(x in expacSelect for x in wrath_match):
         r = Wrath()
+        print (f"\nexpansion chosen was Wrath of the Lich King due to {expacSelect} inside Wrath keyword list\n")
     elif any(x in expacSelect for x in cata_match):
          r = Cata()
+         print (f"\nexpansion chosen was Cataclysm due to {expacSelect} inside Cataclysm keyword list\n")
     elif any(x in expacSelect for x in mists_match):
         r = Mists()
+        print (f"\nexpansion chosen was Mists of Pandaria due to {expacSelect} inside Mists keyword list\n")
     elif any(x in expacSelect for x in warlords_match):
         r = WOD()
+        print (f"\nexpansion chosen was Warlords of Draenor due to {expacSelect} inside Warlords keyword list\n")
     elif any(x in expacSelect for x in legion_match):
         r = Legion()
+        print (f"\nexpansion chosen was Legion due to {expacSelect} inside Legion keyword list\n")
     else:
         print("selection error")
     return r
