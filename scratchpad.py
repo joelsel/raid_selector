@@ -151,6 +151,22 @@ class expacTest:
         #print (r1)
         place
     
+    def castExpacData(self):
+        classList =   self.expacData[0]
+        roleList =    self.expacData[1]
+        class_wt =    self.expacData[2]
+        tank_only =   self.expacData[3]
+        healer_only = self.expacData[4]
+        melee_only =  self.expacData[5]
+        ranged_only = self.expacData[6]
+
+        print(f'classList = {classList}\n')
+        print(f'roleList = {roleList}\n')
+        print(f'class_wt = {class_wt}\n')
+        print(f'tank only = {tank_only}\n')
+        print(f'healer only = {healer_only}\n')
+        print(f'melee only = {melee_only}\n') 
+
     def testdata(self):
         #r = (f"\n\n whole expac data is: {self.expacData}")
         r = (f'\n \
@@ -166,7 +182,7 @@ class expacTest:
 
 w = expacTest(xpick())
 #w.readData()
-w.testdata()
-
+#w.testdata()
+w.castExpacData()
 
 
