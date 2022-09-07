@@ -1,6 +1,6 @@
 #odd = ["one", "three", "five"]
 #even = ["two", "four", "six"]
-
+'''
 def xpick():
     expacSelect = input("expansions wrath, legion, cata: ")
     r = []
@@ -33,3 +33,5 @@ def Cata():
     return expacData
 #test = Legion()
 #print(test)
+
+'''

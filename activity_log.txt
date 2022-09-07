@@ -1,0 +1,11 @@
+Process flowchart:
+input 
+> pick expansion 
+> get class list / get role list 
+> get required roles 
+> pick random role 
+> pick random class 
+> pick required spec 
+> output
+
+20220907 - added expac name to expacData, use that to import correct specList.

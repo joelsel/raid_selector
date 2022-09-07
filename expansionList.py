@@ -42,7 +42,9 @@ def TBC():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1]
 
-    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only]
+    expacName = ['TBC']
+
+    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
 
 def Wrath():
@@ -56,7 +58,9 @@ def Wrath():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0, 1]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0]
 
-    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only]
+    expacName = ['Wrath']
+
+    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
 
 def Cata():
@@ -70,7 +74,9 @@ def Cata():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0, 1]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0]
 
-    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only]
+    expacName = ['Cata']
+
+    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
 
 def Mists():
@@ -84,7 +90,9 @@ def Mists():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0]
 
-    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only]
+    expacName = ['Mists']
+
+    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
 def WOD():
     classList = ['Mage', 'Druid', 'Warrior', 'Paladin', 'Priest', 'Shaman', 'Rogue', 'Hunter', 'Warlock', 'Death Knight', 'Monk']
@@ -97,7 +105,9 @@ def WOD():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0]
 
-    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only]
+    expacName = ['WOD']
+
+    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
 
 def Legion():
@@ -111,5 +121,7 @@ def Legion():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
 
-    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only]
+    expacName = ['Legion']
+
+    expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
