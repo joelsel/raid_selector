@@ -1,7 +1,7 @@
 #implement read method from reference file, map output to local variable, read nested list element from local variable
 from expansionList import *
 
-class expac_selection:
+class expac_data_write:
     def __init__ (self, expacData):
         self.expacData = expacData
     
@@ -29,6 +29,7 @@ class expac_selection:
         print(f'healer only = {healer_only}\n')
         print(f'melee only = {melee_only}\n') 
         print(f'expansion name = {expacName}\n')
+        
 
     def testdata(self):
         #r = (f"\n\n whole expac data is: {self.expacData}")
@@ -43,7 +44,7 @@ class expac_selection:
             ')
         print (r)
 
-w = expac_selection(xpick())
+w = expac_data_write(xpick())
 #w.readData()
 #w.testdata()
 w.castExpacData()

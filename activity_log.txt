@@ -1,11 +1,15 @@
 Process flowchart:
 input 
 > pick expansion 
-> get class list / get role list 
-> get required roles 
+> get class list / get role list (reference expacData)
+> get required roles (rolecheck)
 > pick random role 
 > pick random class 
 > pick required spec 
 > output
 
+
+internal variables > rolewt, cnt_tank, cnt_healer, cnt_melee, cnt_ranged, 
 20220907 - added expac name to expacData, use that to import correct specList.
+
+read generated variable from another python file

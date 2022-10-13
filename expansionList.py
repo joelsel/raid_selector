@@ -1,4 +1,7 @@
-
+#def main():
+#    print ("\nexpansionList imported")
+#    pass
+#if __name__ == "__main__":
 def xpick():
     expacSelect = input("Input desired expansion: TBC, Wrath, Cataclysm, Mists, WoD, Legion -: ")
     expacSelect = expacSelect.lower()
@@ -16,8 +19,8 @@ def xpick():
         r = Wrath()
         print (f"\nexpansion chosen was Wrath of the Lich King due to {expacSelect} inside Wrath keyword list\n")
     elif any(x in expacSelect for x in cata_match):
-         r = Cata()
-         print (f"\nexpansion chosen was Cataclysm due to {expacSelect} inside Cataclysm keyword list\n")
+        r = Cata()
+        print (f"\nexpansion chosen was Cataclysm due to {expacSelect} inside Cataclysm keyword list\n")
     elif any(x in expacSelect for x in mists_match):
         r = Mists()
         print (f"\nexpansion chosen was Mists of Pandaria due to {expacSelect} inside Mists keyword list\n")
@@ -94,6 +97,7 @@ def Mists():
 
     expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
+
 def WOD():
     classList = ['Mage', 'Druid', 'Warrior', 'Paladin', 'Priest', 'Shaman', 'Rogue', 'Hunter', 'Warlock', 'Death Knight', 'Monk']
 
