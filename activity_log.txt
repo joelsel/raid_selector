@@ -9,6 +9,23 @@ input
 > output
 
 
+
+20221021 am
+functional expacData import in scratchpad
+
+
+20221020
+- functional return value from another file in test.py
+    import file as f, get return value from function by using  variable =  f.[classname].[methodname]()
+learning to read from return command from different file
+
+20221018
+test.py as working example of dynamic file import
+
+20221017
+end of expac_selection casting to variables
+see line 24 expac_selection
+
 internal variables > rolewt, cnt_tank, cnt_healer, cnt_melee, cnt_ranged, 
 20220907 - added expac name to expacData, use that to import correct specList.
 

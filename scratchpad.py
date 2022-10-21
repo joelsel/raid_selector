@@ -136,7 +136,7 @@ w.readout()
 #w = expac(r[0], r[1])
 #w.readout()
 
-
+'''
 #implement read method from reference file, map output to local variable, read nested list element from local variable
 from expansionList import *
 
@@ -186,5 +186,23 @@ w = expacSelect(xpick())
 #w.readData()
 #w.testdata()
 w.castExpacData()
+'''
 
-
+import expansionList as el
+w = el.xpick()
+#print (w[0])
+classList =   w[0]
+roleList =    w[1]
+class_wt =    w[2]
+tank_only =   w[3]
+healer_only = w[4]
+melee_only =  w[5]
+ranged_only = w[6]
+expacName =   w[7]
+print(f'classList = {classList}\n')
+print(f'roleList = {roleList}\n')
+print(f'class_wt = {class_wt}\n')
+print(f'tank only = {tank_only}\n')
+print(f'healer only = {healer_only}\n')
+print(f'melee only = {melee_only}\n') 
+print(f'expansion name = {expacName}\n')
