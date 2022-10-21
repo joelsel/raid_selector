@@ -10,6 +10,10 @@ input
 
 
 
+20220121 pm
+functional expacData import from external source in scratchpad
+functional return spec from provided role in scratchpad
+
 20221021 am
 functional expacData import in scratchpad
 
