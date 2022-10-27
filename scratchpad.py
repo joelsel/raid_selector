@@ -187,6 +187,16 @@ w = expacSelect(xpick())
 #w.testdata()
 w.castExpacData()
 '''
+
+'''
+#testing return spec providing role
+import random
+import samplexpac as sl
+specOptions = ['Tank', 'Healer', 'Melee', 'Ranged']
+role_sample = random.choices(specOptions)
+spec_out = sl.sample_expansion.druid_spec(role_sample)
+print (spec_out)
+'''
 # testing return expacData from expansionList
 import expansionList as el
 w = el.xpick()
@@ -207,11 +217,16 @@ print(f'healer only = {healer_only}\n')
 print(f'melee only = {melee_only}\n') 
 print(f'expansion name = {expacName}\n')
 
-
-#testing return spec providing role
 import random
 import samplexpac as sl
 specOptions = ['Tank', 'Healer', 'Melee', 'Ranged']
+g = (random.choices(classList))
+h = (g[0]).lower()
 role_sample = random.choices(specOptions)
-spec_out = sl.sample_expansion.druid_spec(role_sample)
-print (spec_out)
+i = ('sl.pull_expac_spec.' + h + '(role_sample)')
+j = eval(i)
+print (role_sample)
+print (i)
+print (j)
+#spec_out = sl.pull_expac_spec.druid(role_sample)
+#print (spec_out)

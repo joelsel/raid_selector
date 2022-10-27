@@ -8,7 +8,13 @@ input
 > pick required spec 
 > output
 
+20221027 pm
+evaluate concatenated string with eval(var), proof of concept in scratchpad
 
+20221027 am
+return of chosen class to pick spec from class in scratchpad
+
+combine expacData and speclist data into one file
 
 20220121 pm
 functional expacData import from external source in scratchpad
