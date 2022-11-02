@@ -218,15 +218,38 @@ print(f'melee only = {melee_only}\n')
 print(f'expansion name = {expacName}\n')
 
 import random
-import samplexpac as sl
+import importlib
+#samplexpac contains TBC classes
+
+x = ('specList' + expacName[0])
+
+#import specList as sl workaround
+print ('importspeclist string test: ', x) #diag
+
+sl = importlib.import_module(x)
+
+#primitive import init
+prej = 'sl.pullSpec.__init__()'
+
+
+#import samplexpac as sl
 specOptions = ['Tank', 'Healer', 'Melee', 'Ranged']
 g = (random.choices(classList))
+
+#lowercase input to match function names
 h = (g[0]).lower()
+
+#replace space with underscore
+h = h.replace(" ","_")
+
 role_sample = random.choices(specOptions)
-i = ('sl.pull_expac_spec.' + h + '(role_sample)')
+i = ('sl.pullSpec.' + h + '(role_sample)')
+print ("role sample input : ", i) #diag
 j = eval(i)
-print (role_sample)
-print (i)
+
+print (role_sample) #diagnostic
+
+eval(prej) #import 'import' method before running function
 print (j)
-#spec_out = sl.pull_expac_spec.druid(role_sample)
+#spec_out = sl.pullSpec.druid(role_sample)
 #print (spec_out)

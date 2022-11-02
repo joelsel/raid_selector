@@ -8,6 +8,12 @@ input
 > pick required spec 
 > output
 
+20221102 am
+functional pullSpec in scratchpad working with specListWrath, specListWrath modified: added class, __init__ with import, return, rename methods.
+
+20221031 am
+import python module using importlib
+
 20221027 pm
 evaluate concatenated string with eval(var), proof of concept in scratchpad
 

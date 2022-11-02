@@ -77,7 +77,7 @@ def Cata():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0, 1]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0]
 
-    expacName = ['Cata']
+    expacName = ['Cataclysm']
 
     expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
@@ -109,7 +109,7 @@ def WOD():
     melee_only =    [0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1]
     ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0]
 
-    expacName = ['WOD']
+    expacName = ['Warlords']
 
     expacData = [classList, roleList, class_wt, tank_only, healer_only, melee_only, ranged_only, expacName]
     return expacData
