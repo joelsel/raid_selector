@@ -8,6 +8,13 @@ input
 > pick required spec 
 > output
 
+20221104 am
+read matchlist for each expansion, rewrite user input to correct lowercase filename line 43 in test.py
+
+20221103 am
+integrate expacData into single module
+research on how to filter expansion module names, check if expansion is valid, import expacData if true
+
 20221102 am
 functional pullSpec in scratchpad working with specListWrath, specListWrath modified: added class, __init__ with import, return, rename methods.
 
