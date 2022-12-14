@@ -1,10 +1,14 @@
+class getExpac:
+    def expacMatch():
+        match = ['wrath', 'wotlk', 'lich', 'king']
+        return match
 class pullSpec:
     def __init__():
         import random
 
     def mage(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Ranged" in role_sample:
             possible_spec = ['Arcane', 'Fire', 'Frost']
             spec_sample = random.choices(possible_spec)
@@ -14,7 +18,7 @@ class pullSpec:
 
     def druid(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Melee" in role_sample:
             spec_sample = "Feral"
         elif "Healer" in role_sample:
@@ -29,7 +33,7 @@ class pullSpec:
 
     def warrior(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Melee" in role_sample:
             possible_spec = ["Arms", "Fury"]
             spec_sample = random.choices(possible_spec)
@@ -41,7 +45,7 @@ class pullSpec:
 
     def paladin(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Melee" in role_sample:
             spec_sample = "Retribution"
         elif "Healer" in role_sample:
@@ -54,7 +58,7 @@ class pullSpec:
 
     def priest(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Healer" in role_sample:
             possible_spec = ['Holy', 'Discipline']
             spec_sample = random.choices(possible_spec)
@@ -65,7 +69,7 @@ class pullSpec:
         return spec_sample
     def shaman(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Ranged" in role_sample:
             spec_sample = "Elemental"
         elif "Melee" in role_sample:
@@ -78,7 +82,7 @@ class pullSpec:
 
     def rogue(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Melee" in role_sample:
             possible_spec = ['Assassination', 'Combat', 'Subtlety']
             spec_sample = random.choices(possible_spec)
@@ -88,7 +92,7 @@ class pullSpec:
 
     def hunter(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Ranged" in role_sample:
             possible_spec = ['Marksmanship', 'Beast Mastery', 'Survival']
             spec_sample = random.choices(possible_spec)
@@ -98,7 +102,7 @@ class pullSpec:
 
     def warlock(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Ranged" in role_sample:
             possible_spec = ['Affliction', 'Demonology', 'Destruction']
             spec_sample = random.choices(possible_spec)
@@ -108,7 +112,7 @@ class pullSpec:
 
     def death_knight(role_sample):
         #import random
-        spec_sample = ''
+        #spec_sample = ''
         if "Melee" in role_sample:
             possible_spec = ['Frost', 'Unholy', 'Blood']
             spec_sample = random.choices(possible_spec)

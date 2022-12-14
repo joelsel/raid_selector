@@ -8,6 +8,27 @@ input
 > pick required spec 
 > output
 
+process 2
+
+>construct list of expansions with filter
+>build match list from available expansions
+>input expansion string
+>check match critera for expansion string against expansion list matches
+>output chosen expansion to var
+
+20221114 pm
+to update all speclist files to conform to specListWrath standard for integration, continue with test.py
+
+20221114 am
+current updat now in test.py
+
+20221111 am
+process 2 workflow update
+
+20221110 am
+update other specList to match specListWrath for integration into test.py code
+pre import code found in scratchpad line 220
+
 20221104 am
 read matchlist for each expansion, rewrite user input to correct lowercase filename line 43 in test.py
 
