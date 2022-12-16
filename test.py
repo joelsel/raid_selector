@@ -37,39 +37,47 @@ outx2 = f.num.callx2()
 print (outx, outx2)
 '''
 
-userin = input("?")
+
+class chooseExpansion:
+    def main():
+        import os, importlib
+        home = os.getcwd()
+        userin = input("Choose Expansion: ")
+        #print (home) #diag
+
+        contents = (os.listdir(home))
+        target = []
+        for n in contents:
+            if 'spec' in n:
+                target.append(n)
+        #print (target) #diag
+        removeExt = []
+        for n in target:
+            removeExt.append(os.path.splitext(n)[0])
+        #print (removeExt) #diag
+
+        expacMatchList = []
+        for n in removeExt:
+            expacMatchList.append(importlib.import_module(n).getExpac.expacMatch())
+            #print (importlib.import_module(n).getExpac.expacMatch()) #diag
+            #print (expacMatchList) #diag
+
+        #chosen = []
+        for n in range(len(expacMatchList)):
+            if userin.lower() in expacMatchList[n]:
+                expacOut = (expacMatchList[n][0], removeExt[n])
+                print (expacOut) #diag
+                return expacOut
+            else:
+                pass
+
+               
 
 
-#for a in allExpac[n]:
-
-
-#print ("userin = ", userin) #diag
-import os
-home = os.getcwd()
-#print (home) #diag
-contents = (os.listdir(home))
-target = []
-for n in contents:
-    if 'spec' in n:
-        target.append(n)
-#print (target) #diag
-removeExt = []
-for n in target:
-    removeExt.append(os.path.splitext(n)[0])
-#print (removeExt) #diag
-
-chosen = []
-for n in removeExt:
-    if userin.lower() in n.lower():
-       chosen.append(n)
-    else:
-        pass
-
-print (chosen[0])
-
+chooseExpansion.main()
+'''
 allExpac = ['tbc_match', 'wrath_match', 'cataclysm_match', 'mists_match', 'warlords_match', 'legion_match']
 
-'''
 tbc_match = ['tbc', 'bc', 'burning', 'crusade']
 wrath_match = ['wrath', 'wotlk', 'lich', 'king']
 cata_match = ['cata', 'cataclysm']
