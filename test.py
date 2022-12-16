@@ -67,6 +67,8 @@ class chooseExpansion:
             if userin.lower() in expacMatchList[n]:
                 expacOut = (expacMatchList[n][0], removeExt[n])
                 print (expacOut) #diag
+                print (expacOut[0]) #diag
+                print (expacOut[1]) #diag
                 return expacOut
             else:
                 pass
