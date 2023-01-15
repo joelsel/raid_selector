@@ -16,6 +16,9 @@ process 2
 >check match critera for expansion string against expansion list matches
 >output chosen expansion to var
 
+20221217 pm
+importlib.import_module doesnt seem to work in xtest.py
+
 20221114 pm
 to update all speclist files to conform to specListWrath standard for integration, continue with test.py
 

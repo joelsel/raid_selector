@@ -37,7 +37,7 @@ outx2 = f.num.callx2()
 print (outx, outx2)
 '''
 
-
+'''
 class chooseExpansion:
     def main():
         import os, importlib
@@ -72,11 +72,23 @@ class chooseExpansion:
                 return expacOut
             else:
                 pass
-
+'''
                
 
 
-chooseExpansion.main()
+#chooseExpansion.main()
+
+
+import importlib
+test = importlib.import_module('expac_selection').chooseExpansion.main()
+print (test)
+
+
+#from expac_selection import chooseExpansion
+#chooseExpansion.main()
+
+
+
 '''
 allExpac = ['tbc_match', 'wrath_match', 'cataclysm_match', 'mists_match', 'warlords_match', 'legion_match']
 
