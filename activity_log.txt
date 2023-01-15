@@ -16,6 +16,9 @@ process 2
 >check match critera for expansion string against expansion list matches
 >output chosen expansion to var
 
+20230116 am
+xtest not tracked, moved to expac_selection.py, run from test.py
+
 20221217 pm
 importlib.import_module doesnt seem to work in xtest.py
 
