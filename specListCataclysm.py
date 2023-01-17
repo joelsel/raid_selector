@@ -1,6 +1,6 @@
 class getExpac:
     def expacMatch():
-        match = ['cataclysm', 'cat']
+        match = ['cataclysm', 'cat', 'cata']
         return match
 class pullSpec:
     def __init__():

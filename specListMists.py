@@ -1,6 +1,6 @@
 class getExpac:
     def expacMatch():
-        match = ['mists', 'mist']
+        match = ['mists', 'mist', 'pandaria', 'mists of pandaria']
         return match
 class pullSpec:
     def __init__():

@@ -1,6 +1,6 @@
 class getExpac:
     def expacMatch():
-        match = ['wrath', 'wotlk', 'lich', 'king']
+        match = ['wrath', 'wotlk', 'lich', 'king', 'lich king', 'wrath of the lich king']
         return match
 class pullSpec:
     def __init__():

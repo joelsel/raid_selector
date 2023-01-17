@@ -1,6 +1,6 @@
 class getExpac:
     def expacMatch():
-        match = ['warlords', 'warlord', 'wod']
+        match = ['warlords', 'warlord', 'wod', 'warlords of draenor', 'draenor', 'warlord of draenor']
         return match
 
 class pullSpec:
