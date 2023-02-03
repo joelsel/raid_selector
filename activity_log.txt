@@ -16,6 +16,9 @@ process 2
 >check match critera for expansion string against expansion list matches
 >output chosen expansion to var
 
+20230203 am
+speclists per expansion tested, to integrate references to main file
+
 20230118 am
 reverse search of matchlist from input KIV, added more plausible matches to matchlist, run from test.py
 

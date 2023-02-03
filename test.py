@@ -81,7 +81,8 @@ class chooseExpansion:
 
 import importlib
 test = importlib.import_module('expac_selection').chooseExpansion.main()
-print (test)
+#print (test)
+print (f'expansion name is {test[0]} and expansion list will be {test[1]}')
 
 
 #from expac_selection import chooseExpansion
