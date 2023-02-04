@@ -13,35 +13,14 @@ def timestamp(now):
 
 prog_init = 1
 
-# RaidSelector - defining default values
-class_list = ["Mage", "Druid", "Warrior", "Paladin",
-        "Priest", "Shaman", "Rogue", "Hunter", "Warlock",
-        "Demon Hunter", "Death Knight", "Monk"]
-
-role_list = ['Tank', 'Healer', 'Melee', 'Ranged']
-
-line_output = []
-spec_sample = []
-tank_wt, healer_wt, melee_wt, ranged_wt = [1, 1, 1, 1]
-global role_wt
-global cnt_tank, cnt_healer, cnt_melee, cnt_ranged
-role_wt = [tank_wt, healer_wt, melee_wt, ranged_wt]
-cnt_tank, cnt_healer, cnt_melee, cnt_ranged = [0, 0, 0, 0]
-
-class_wt =      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-tank_only =     [0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
-healer_only =   [0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1]
-melee_only =    [0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1]
-ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-
-
 #TODO terminus location
 global terminus
 terminus = ("\n\n{:-^60}\n\n".format(" end of output "))
 
-def raidReport(cnt_tank, cnt_healer, cnt_melee, cnt_ranged):
+
+def raidReport(count_tank, count_healer, count_melee, count_ranged):
     f = open("hello.txt", "a")
-    report = (("\nTank count: {}, Healer count: {}, Melee count: {}, Ranged count: {}").format(cnt_tank, cnt_healer, cnt_melee, cnt_ranged))
+    report = (("\nTank count: {}, Healer count: {}, Melee count: {}, Ranged count: {}").format(count_tank, count_healer, count_melee, count_ranged))
     f.write("".join(report))
     f.close()
 
@@ -58,15 +37,15 @@ def sampleClass():
     return class_sample
 
 
-def role_check(cnt_tank, cnt_healer, cnt_melee, cnt_ranged):
+def role_check(count_tank, count_healer, count_melee, count_ranged):
     global tank_wt, healer_wt, melee_wt, ranged_wt, role_wt
-    if cnt_tank >= 2:
+    if count_tank >= 2:
         tank_wt = 0
-    if cnt_healer >= 6:
+    if count_healer >= 6:
         healer_wt = 0
-    if cnt_melee >= 0:
+    if count_melee >= 0:
         pass
-    if cnt_ranged >= 0:
+    if count_ranged >= 0:
         pass
     role_wt = [tank_wt, healer_wt, melee_wt, ranged_wt]
 
@@ -85,16 +64,40 @@ def class_check(role_sample):
 
 
 def role_counter():
-    global cnt_tank, cnt_healer, cnt_melee, cnt_ranged
+    global count_tank, count_healer, count_melee, count_ranged
     if "Tank" in role_sample:
-        cnt_tank += 1
+        count_tank += 1
     if "Healer" in role_sample:
-        cnt_healer += 1
+        count_healer += 1
     if "Melee" in role_sample:
-        cnt_melee += 1
+        count_melee += 1
     if "Ranged" in role_sample:
-        cnt_ranged += 1
+        count_ranged += 1
 
+
+
+# -------------deprecated hardcoded class data, moved to expansion class data-----------------
+'''
+# RaidSelector - defining default values
+class_list = ["Mage", "Druid", "Warrior", "Paladin",
+        "Priest", "Shaman", "Rogue", "Hunter", "Warlock",
+        "Demon Hunter", "Death Knight", "Monk"]
+
+role_list = ['Tank', 'Healer', 'Melee', 'Ranged']
+
+line_output = []
+spec_sample = []
+tank_wt, healer_wt, melee_wt, ranged_wt = [1, 1, 1, 1]
+global role_wt
+global count_tank, count_healer, count_melee, count_ranged
+role_wt = [tank_wt, healer_wt, melee_wt, ranged_wt]
+count_tank, count_healer, count_melee, count_ranged = [0, 0, 0, 0]
+
+class_wt =      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+tank_only =     [0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
+healer_only =   [0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1]
+melee_only =    [0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1]
+ranged_only =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
 
 def empty_choice():
     while True:
@@ -253,16 +256,16 @@ def class_redirect(class_sample):
         print("class_picker error")
 
     role_counter()
-
+'''
 """
 #class_redirect debugging
     print("".join(class_sample))
     print("".join(role_sample))
     print("".join(spec_sample))
-    print("Tank count: ", cnt_tank)
-    print("Melee count: ", cnt_melee)
-    print("Ranged count: ", cnt_ranged)
-    print("Healer count: ", cnt_healer)
+    print("Tank count: ", count_tank)
+    print("Melee count: ", count_melee)
+    print("Ranged count: ", count_ranged)
+    print("Healer count: ", count_healer)
     print("Tankwt = ",tank_wt)
     print("Healerwt = ",healer_wt)
     print("meleewt = ", melee_wt)
@@ -323,7 +326,7 @@ def class_picker_v2():
 
     elif cycle_count > 0:
         for cyc in range(cycle_count):
-            role_check(cnt_tank, cnt_healer, cnt_melee, cnt_ranged)
+            role_check(count_tank, count_healer, count_melee, count_ranged)
             sampleRole(role_wt)
             class_check(role_sample)
             sampleClass()
@@ -338,7 +341,7 @@ def class_picker_v2():
 while prog_init == 1:
         
     try:
-        run_choice = int(input("Main Menu: Press 1 for class_dev, Press 2 for Class Picker v2: "))
+        run_choice = int(input("Main Menu: Press 1 for class_dev, Press 2 for Class Picker: "))
         print("selection is going to be: ", run_choice)
 
     except ValueError:
@@ -365,7 +368,7 @@ while prog_init == 1:
                         print("selection is: ", write_mode, " overwrite mode active.")
                         f.write("\n")
                         class_picker_v2()
-                        raidReport(cnt_tank, cnt_healer, cnt_melee, cnt_ranged)
+                        raidReport(count_tank, count_healer, count_melee, count_ranged)
                         f.write(terminus)
                     break
 
@@ -374,7 +377,7 @@ while prog_init == 1:
                     with open("hello.txt", "a") as f:
                         print("selection is: ", write_mode, " append mode active.")
                         class_picker_v2()
-                        raidReport(cnt_tank, cnt_healer, cnt_melee, cnt_ranged)
+                        raidReport(count_tank, count_healer, count_melee, count_ranged)
                         f.write(terminus)
 
             except ValueError:
