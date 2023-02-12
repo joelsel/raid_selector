@@ -13,6 +13,13 @@ def timestamp(now):
 
 prog_init = 1
 
+#---------------------------------------start from here----------------------------
+#import importlib
+#queryExpac = importlib.import_module('expac_selection').chooseExpansion.main()
+#print (queryExpac)
+#print (f'expansion name is {queryExpac[0]} and expansion list will be {queryExpac[1]}')
+
+
 #TODO terminus location
 global terminus
 terminus = ("\n\n{:-^60}\n\n".format(" end of output "))

@@ -16,6 +16,13 @@ process 2
 >check match critera for expansion string against expansion list matches
 >output chosen expansion to var
 
+20230212 pm
+# method is elegant but doesnt do what is needed
+# requiredRole>validClasses>random valid class > valid spec for class > output
+
+20230205 am
+add in role list for each expansion
+
 20230203 am
 speclists per expansion tested, to integrate references to main file
 
