@@ -25,10 +25,14 @@ git branch -a
 git branch -r
 #show remote branches
 
+git branch -m "oldName" "newName"
+# change name of current branch
+
 git checkout -b (branch_name)
 #create a new branch
 
-git checkout (branch_name)
+####git checkout (branch_name)
+# not sure why this is here dont use
 
 git remote
 #show connected remote repo

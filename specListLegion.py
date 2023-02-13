@@ -4,53 +4,26 @@ class expac:
         return match
 
 class classes:
-    def getClasses(requiredRoles):
-        classInclude = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    def getClass(requiredRole):
+        classOut = []
         tank =         [0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
         healer =       [0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1]
         melee =        [0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1]
         ranged =       [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
         allRoles =     ['tank', 'healer', 'melee', 'ranged']
-        '''
-        for foo in range(len(requiredRoles)):
-            if 'tank' in requiredRoles[foo]:
-                for x in range(len(classInclude)):
-                    if classInclude[x] < tank[x]:
-                        classInclude[x] = 1
-                    else:
-                        pass
-            
-            elif 'healer' in requiredRoles[foo]:
-                for x in range(len(classInclude)):
-                    if classInclude[x] < healer[x]:
-                        classInclude[x] = 1
-                    else:
-                        pass
+        allClass =     ['mage', 'druid', 'warrior', 'paladin',  'priest', 'shaman', 'rogue', 'hunter', 'warlock', 'death_knight', 'monk', 'demon_hunter']
 
-            elif 'melee' in requiredRoles[foo]:
-                for x in range(len(classInclude)):
-                    if classInclude[x] < melee[x]:
-                        classInclude[x] = 1
+        for x in range(len(allRoles)):
+            if allRoles[x] in requiredRole:
+                validClasses = eval(allRoles[x])
+                for y in range(len(validClasses)):
+                    if validClasses[y] == 1:
+                        classOut.append(allClass[y])
                     else:
                         pass
-
-            elif 'ranged' in requiredRoles[foo]:
-                for x in range(len(classInclude)):
-                    if classInclude[x] < ranged[x]:
-                        classInclude[x] = 1
-                    else:
-                        pass
-        '''
-        for foo in range(len(requiredRoles)):
-            currentRole = eval(requiredRoles[foo])
-            for x in range(len(classInclude)):
-                    if classInclude[x] < currentRole[x]:
-                        classInclude[x] = 1
-                    else:
-                        pass
-        return classInclude
-
-
+            else:
+                pass
+        return classOut
         #for x in rolevariants, classwt[x] + tankonly[x] > 0, do something
         # method is elegant but doesnt do what is needed
         # requiredRole>validClasses>random valid class > valid spec for class > output
