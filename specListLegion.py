@@ -6,12 +6,12 @@ class expac:
 class classes:
     def getClass(requiredRole):
         classOut = []
-        tank =         [0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
-        healer =       [0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0]
-        melee =        [0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1]
-        ranged =       [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-        allRoles =     ['tank', 'healer', 'melee', 'ranged']
-        allClass =     ['mage', 'druid', 'warrior', 'paladin',  'priest', 'shaman', 'rogue', 'hunter', 'warlock', 'death_knight', 'monk', 'demon_hunter']
+        tank =     [0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1]
+        healer =   [0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0]
+        melee =    [0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1]
+        ranged =   [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
+        allRoles = ['tank', 'healer', 'melee', 'ranged']
+        allClass = ['mage', 'druid', 'warrior', 'paladin',  'priest', 'shaman', 'rogue', 'hunter', 'warlock', 'death_knight', 'monk', 'demon_hunter']
 
         for x in range(len(allRoles)):
             if allRoles[x] in requiredRole:
@@ -123,17 +123,6 @@ class getSpec:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def monk(requiredRole):
-        if "tank" in requiredRole:
-            spec_sample = "Brewmaster"
-        elif "melee" in requiredRole:
-            spec_sample = "Windwalker"
-        elif "healer" in requiredRole:
-            spec_sample = "Mistweaver"
-        else:
-            spec_sample = "Invalid!"
-        return spec_sample
-
     def death_knight(requiredRole):
         if "melee" in requiredRole:
             possible_spec = ['Frost', 'Unholy', 'Blood']
@@ -141,6 +130,17 @@ class getSpec:
         elif "tank" in requiredRole:
             possible_spec = ['Frost', 'Blood']
             spec_sample = random.choices(possible_spec)
+        else:
+            spec_sample = "Invalid!"
+        return spec_sample
+
+    def monk(requiredRole):
+        if "tank" in requiredRole:
+            spec_sample = "Brewmaster"
+        elif "melee" in requiredRole:
+            spec_sample = "Windwalker"
+        elif "healer" in requiredRole:
+            spec_sample = "Mistweaver"
         else:
             spec_sample = "Invalid!"
         return spec_sample
