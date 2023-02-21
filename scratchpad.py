@@ -68,7 +68,7 @@ role_sample = random.choices(specOptions)
 spec_out = sl.sample_expansion.druid_spec(role_sample)
 print (spec_out)
 '''
-
+'''
 # testing return expacData from expansionList
 import expansionList as el
 w = el.xpick()
@@ -99,6 +99,7 @@ x = ('specList' + expacName[0])
 #import specList as sl workaround
 print ('importspeclist string test: ', x) #diag
 '''
+'''
 sl = importlib.import_module(x)
 
 #primitive import init
@@ -127,3 +128,18 @@ print (j)
 #spec_out = sl.pullSpec.druid(role_sample)
 #print (spec_out)
 '''
+
+import importlib
+currentExpansion = "testShared"
+requiredRole = ["tank"]
+viableClass = []
+viableSpec = []
+print(f'\ncurrent required role = {requiredRole}')
+returnClassCommand = (f"importlib.import_module('{currentExpansion}').getClasses({requiredRole}).getRandClass()")
+print(f"return class command is {returnClassCommand}")
+viableClass.append(eval(returnClassCommand))
+print(f"viable class = {viableClass}")
+returnViableSpec = (f"importlib.import_module('{currentExpansion}').getSpec({requiredRole}).{viableClass[0]}()")
+print (f'return viable spec command is = {returnViableSpec}')
+viableSpec.append(eval(returnViableSpec))
+print(viableSpec)
