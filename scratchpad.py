@@ -130,16 +130,65 @@ print (j)
 '''
 
 import importlib
-currentExpansion = "testShared"
-requiredRole = ["tank"]
-viableClass = []
-viableSpec = []
-print(f'\ncurrent required role = {requiredRole}')
-returnClassCommand = (f"importlib.import_module('{currentExpansion}').getClasses({requiredRole}).getRandClass()")
-print(f"return class command is {returnClassCommand}")
-viableClass.append(eval(returnClassCommand))
-print(f"viable class = {viableClass}")
-returnViableSpec = (f"importlib.import_module('{currentExpansion}').getSpec({requiredRole}).{viableClass[0]}()")
-print (f'return viable spec command is = {returnViableSpec}')
-viableSpec.append(eval(returnViableSpec))
-print(viableSpec)
+#raidSize = int(input("number: "))
+raidSize = 25
+class utility:
+    def capAll(input):
+        temp = (input.replace("_", " ")).split()
+        readable = []
+        readableOut = []
+        for x in range(len(temp)):
+            readable.append(temp[x].capitalize())
+            readableOut = " ".join(readable)
+        return readableOut
+
+
+def main(count):
+
+    currentExpansion = "testShared"
+    requiredRole = ["ranged"]
+
+
+    print(f'\ncurrent required role = {requiredRole}')
+    returnClassCommand = (f"importlib.import_module('{currentExpansion}').getClasses({requiredRole}).getRandClass()")
+    print(f"return class command is {returnClassCommand}")
+    viableClass = (eval(returnClassCommand))
+    returnViableSpec = (f"importlib.import_module('{currentExpansion}').getSpec({requiredRole}).{viableClass}()")
+    print (f'return viable spec command is = {returnViableSpec}')
+    viableSpec = (eval(returnViableSpec))
+
+    requiredRoleReadable = utility.capAll(requiredRole[0])
+    viableSpecReadable = utility.capAll(viableSpec)
+    viableClassReadable = utility.capAll(viableClass)
+   
+    lineOut = (f'\n{(count+1):<4}{requiredRoleReadable:_<10}{viableSpecReadable:-^15}{viableClassReadable:_>10}')
+    print(requiredRoleReadable)
+    print(viableClassReadable)
+    print(viableSpecReadable)
+
+    #print(f"{requiredRoleReadable:<15}{viableSpecReadable:^10}{viableClassReadable:^15}{'end':>1}")
+    return lineOut
+main(raidSize)
+
+
+def wtf(lineOut):    
+    with open ('trial.txt', 'a') as f:
+        #f.write(f"\n\n")
+            f.write(lineOut)
+
+wtf("\n\n")
+for x in range(raidSize):
+    wtf(main(x))
+'''
+def capAll(input):
+    temp = (input.replace("_", " ")).split()
+    readable = []
+    for x in range(len(temp)):
+        readable.append(temp[x].capitalize())
+    return readable
+
+
+#b = 'this'
+
+#print(capAll(b))
+'''

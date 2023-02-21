@@ -55,122 +55,124 @@ class getSpec:
         self.requiredRole = requiredRole
 
     def mage(self):
-        if "ranged" in self.requiredRole:
+        if 'ranged' in self.requiredRole:
             possibleSpec = ['Arcane', 'Fire', 'Frost']
-            spec = random.choices(possibleSpec)[0]
+            spec = random.choices(possibleSpec)
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def druid(self):
-        if "melee" in self.requiredRole:
-            spec = "Feral"
-        elif "healer" in self.requiredRole:
-            spec = "Restoration"
-        elif "tank" in self.requiredRole:
-            spec = "Guardian"
-        elif "ranged" in self.requiredRole:
-            spec = "Balance"
+        if 'melee' in self.requiredRole:
+            spec = ['Feral']
+        elif 'healer' in self.requiredRole:
+            spec = ['Restoration']
+        elif 'tank' in self.requiredRole:
+            spec = ['Guardian']
+        elif 'ranged' in self.requiredRole:
+            spec = ['Balance']
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def warrior(self):
-        if "melee" in self.requiredRole:
+        if 'melee' in self.requiredRole:
             possibleSpec = ["Arms", "Fury"]
-            spec = random.choices(possibleSpec)[0]
-        elif "tank" in self.requiredRole:
+            spec = random.choices(possibleSpec)
+        elif 'tank' in self.requiredRole:
             spec = "Protection"
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def paladin(self):
-        if "melee" in self.requiredRole:
-            spec = "Retribution"
-        elif "healer" in self.requiredRole:
-            spec = "Holy"
-        elif "tank" in self.requiredRole:
-            spec = "Protection"
+        if 'melee' in self.requiredRole:
+            spec = ['Retribution']
+        elif 'healer' in self.requiredRole:
+            spec = ['Holy']
+        elif 'tank' in self.requiredRole:
+            spec = ['Protection']
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def priest(self):
-        if "healer" in self.requiredRole:
+        if 'healer' in self.requiredRole:
             possibleSpec = ['Holy', 'Discipline']
-            spec = random.choices(possibleSpec)[0]
-        elif "ranged" in self.requiredRole:
-            spec = "Shadow"
+            spec = random.choices(possibleSpec)
+        elif 'ranged' in self.requiredRole:
+            spec = ['Shadow']
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def shaman(self):
-        if "ranged" in self.requiredRole:
-            spec = "Elemental"
-        elif "melee" in self.requiredRole:
-            spec = "Enhancement"
-        elif "healer" in self.requiredRole:
-            spec = "Restoration"
+        if 'ranged' in self.requiredRole:
+            spec = ['Elemental']
+        elif 'melee' in self.requiredRole:
+            spec = ['Enhancement']
+        elif 'healer' in self.requiredRole:
+            spec = ['Restoration']
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def rogue(self):
-        if "melee" in self.requiredRole:
+        if 'melee' in self.requiredRole:
             possibleSpec = ['Assassination', 'Combat', 'Subtlety']
-            spec = random.choices(possibleSpec)[0]
+            spec = random.choices(possibleSpec)
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def hunter(self):
-        if "ranged" in self.requiredRole:
-            possibleSpec = ['Marksmanship', 'Beast Mastery', 'Survival']
-            spec = random.choices(possibleSpec)[0]
+        if 'ranged' in self.requiredRole:
+            possibleSpec = ['Marksmanship', 'Beast Mastery']
+            spec = random.choices(possibleSpec)
+        elif 'melee' in self.requiredRole:
+            spec = ['Survival']
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def warlock(self):
-        if "ranged" in self.requiredRole:
+        if 'ranged' in self.requiredRole:
             possibleSpec = ['Affliction', 'Demonology', 'Destruction']
-            spec = random.choices(possibleSpec)[0]
+            spec = random.choices(possibleSpec)
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def death_knight(self):
-        if "melee" in self.requiredRole:
+        if 'melee' in self.requiredRole:
             possibleSpec = ['Frost', 'Unholy', 'Blood']
-            spec = random.choices(possibleSpec)[0]
-        elif "tank" in self.requiredRole:
+            spec = random.choices(possibleSpec)
+        elif 'tank' in self.requiredRole:
             possibleSpec = ['Frost', 'Blood']
-            spec = random.choices(possibleSpec)[0]
+            spec = random.choices(possibleSpec)
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def monk(self):
-        if "tank" in self.requiredRole:
-            spec = "Brewmaster"
-        elif "melee" in self.requiredRole:
-            spec = "Windwalker"
-        elif "healer" in self.requiredRole:
-            spec = "Mistweaver"
+        if 'tank' in self.requiredRole:
+            spec = ['Brewmaster']
+        elif 'melee' in self.requiredRole:
+            spec = ['Windwalker']
+        elif 'healer' in self.requiredRole:
+            spec = ['Mistweaver']
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
     def demon_hunter(self):
-        if "tank" in self.requiredRole:
-            spec = "Vengeance"
-        elif "melee" in self.requiredRole:
-            spec = "Havoc"
+        if 'tank' in self.requiredRole:
+            spec = ['Vengeance']
+        elif 'melee' in self.requiredRole:
+            spec = ['Havoc']
         else:
-            spec = "Invalid!"
-        return spec
+            spec = ['Invalid!']
+        return spec[0]
 
 #returnSpec = (f"getSpec(requiredRole).{getClass(requiredRole)}()")
 #print (returnSpec)

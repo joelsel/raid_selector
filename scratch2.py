@@ -14,6 +14,7 @@ class sample_expansion:
             spec_sample = "Invalid!"
         return spec_sample
 '''
+'''
 class pull_expac_spec:
     def mage(role_sample):
         #global spec_sample
@@ -110,3 +111,16 @@ class pull_expac_spec:
         else:
             spec_sample = "Invalid!"
         return spec_sample
+'''
+raidSize = int(input("number: "))
+
+with open ('trial.txt', 'a') as f:
+    f.write(f"\n\n")
+    for x in range(raidSize):
+        foo = ['foo']
+        bar = ['bar']
+        baz = ['baz']
+        f.write((f'\n{(x+1):<4}{foo[0]:_<15}{bar[0]:+^15}{baz[0]:~>25}'))
+
+
+    
