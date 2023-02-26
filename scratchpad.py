@@ -131,7 +131,9 @@ print (j)
 
 import importlib
 #raidSize = int(input("number: "))
-raidSize = 25
+raidSize = 2
+expansionName = importlib.import_module("expac_selection").chooseExpansion.main()
+
 class utility:
     def capAll(input):
         temp = (input.replace("_", " ")).split()
@@ -143,14 +145,14 @@ class utility:
         return readableOut
 
 
-def main(count):
+def main(count, expansionName):
 
-    currentExpansion = "testShared"
+    currentExpansion = expansionName[1]
     requiredRole = ["ranged"]
 
 
     print(f'\ncurrent required role = {requiredRole}')
-    returnClassCommand = (f"importlib.import_module('{currentExpansion}').getClasses({requiredRole}).getRandClass()")
+    returnClassCommand = (f"importlib.import_module('{currentExpansion}').classes.getClasses({requiredRole})")
     print(f"return class command is {returnClassCommand}")
     viableClass = (eval(returnClassCommand))
     returnViableSpec = (f"importlib.import_module('{currentExpansion}').getSpec({requiredRole}).{viableClass}()")
@@ -168,7 +170,9 @@ def main(count):
 
     #print(f"{requiredRoleReadable:<15}{viableSpecReadable:^10}{viableClassReadable:^15}{'end':>1}")
     return lineOut
-main(raidSize)
+
+
+main(raidSize,expansionName)
 
 
 def wtf(lineOut):    
@@ -177,6 +181,8 @@ def wtf(lineOut):
             f.write(lineOut)
 
 wtf("\n\n")
+#print(importlib.import_module("expac_selection").chooseExpansion.main())
+#wtf(f"\n expansion: {}")
 for x in range(raidSize):
     wtf(main(x))
 '''

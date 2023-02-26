@@ -18,7 +18,7 @@ class chooseExpansion:
 
         expacMatchList = []
         for n in removeExt:
-            expacMatchList.append(importlib.import_module(n).getExpac.expacMatch())
+            expacMatchList.append(importlib.import_module(n).expansion.expansionMatch())
             #print (importlib.import_module(n).getExpac.expacMatch()) #diag
 
         #chosen = []

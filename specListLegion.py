@@ -1,5 +1,5 @@
-class expac:
-    def getExpac():
+class expansion:
+    def expansionMatch():
         match = ['legion', 'leg']
         return match
 
@@ -28,9 +28,9 @@ class classes:
         # method is elegant but doesnt do what is needed
         # requiredRole>validClasses>random valid class > valid spec for class > output
 #-----------------------------------------------
-class spec(queryClasses):
-    def getSpec():
-        nothinghere
+#class spec(queryClasses):
+#    def getSpec():
+#        nothinghere
 
 class getSpec:
     def __init__():
@@ -101,7 +101,7 @@ class getSpec:
 
     def rogue(requiredRole):
         if "melee" in requiredRole:
-            possible_spec = ['Assassination', 'Combat', 'Subtlety']
+            possible_spec = ['Assassination', 'Outlaw', 'Subtlety']
             spec_sample = random.choices(possible_spec)
         else:
             spec_sample = "Invalid!"

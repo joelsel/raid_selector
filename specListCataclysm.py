@@ -1,7 +1,30 @@
-class getExpac:
-    def expacMatch():
+class expansion:
+    def expansionMatch():
         match = ['cataclysm', 'cat', 'cata']
         return match
+
+class classes:
+    def getClasses(requiredRole):
+        classesOut = []
+        tank =       [0, 1, 1, 1, 0, 0, 0, 0, 0, 1]
+        healer =     [0, 1, 0, 1, 1, 1, 0, 0, 0, 0]
+        melee =      [0, 1, 1, 1, 0, 1, 1, 0, 0, 1]
+        ranged =     [1, 1, 0, 0, 1, 1, 0, 1, 1, 0]
+        allRoles =   ['tank', 'healer', 'melee', 'ranged']
+        allclasses = ['mage', 'druid', 'warrior', 'paladin',  'priest', 'shaman', 'rogue', 'hunter', 'warlock', 'death_knight']
+
+        for x in range(len(allRoles)):
+            if allRoles[x] in requiredRole:
+                validClasses = eval(allRoles[x])
+                for y in range(len(validClasses)):
+                    if validClasses[y] == 1:
+                        classesOut.append(allclasses[y])
+                    else:
+                        pass
+            else:
+                pass
+        return classesOut
+
 class pullSpec:
     def __init__():
         import random
