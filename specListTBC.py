@@ -4,7 +4,13 @@ class expansion:
         return match
 
 class classes:
-    def getClasses(requiredRole):
+    def __init__():
+        import random
+
+    def getRandClass(requiredRole):
+        
+        import random
+
         classesOut = []
         tank =       [0, 1, 1, 1, 0, 0, 0, 0, 0]
         healer =     [0, 1, 0, 1, 1, 1, 0, 0, 0]
@@ -23,102 +29,103 @@ class classes:
                         pass
             else:
                 pass
-        return classesOut
+        randClass = random.choices(classesOut)
+        return randClass[0]
 
-class pullSpec:
+class getSpec:
     def __init__():
         import random
 
-    def mage(role_sample):
+    def mage(requiredRole):
         #spec_sample = ''
-        if "Ranged" in role_sample:
+        if 'ranged' in requiredRole:
             possible_spec = ['Arcane', 'Fire', 'Frost']
             spec_sample = random.choices(possible_spec)
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def druid(role_sample):
+    def druid(requiredRole):
         #spec_sample = ''
-        if "Melee" in role_sample:
+        if 'melee' in requiredRole:
             spec_sample = "Feral"
-        elif "Healer" in role_sample:
+        elif 'healer' in requiredRole:
             spec_sample = "Restoration"
-        elif "Tank" in role_sample:
+        elif 'tank' in requiredRole:
             spec_sample = "Guardian"
-        elif "Ranged" in role_sample:
+        elif 'ranged' in requiredRole:
             spec_sample = "Balance"
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def warrior(role_sample):
+    def warrior(requiredRole):
         #spec_sample = ''
-        if "Melee" in role_sample:
+        if 'melee' in requiredRole:
             possible_spec = ["Arms", "Fury"]
             spec_sample = random.choices(possible_spec)
-        elif "Tank" in role_sample:
+        elif 'tank' in requiredRole:
             spec_sample = "Protection"
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def paladin(role_sample):
+    def paladin(requiredRole):
         #spec_sample = ''
-        if "Melee" in role_sample:
+        if 'melee' in requiredRole:
             spec_sample = "Retribution"
-        elif "Healer" in role_sample:
+        elif 'healer' in requiredRole:
             spec_sample = "Holy"
-        elif "Tank" in role_sample:
+        elif 'tank' in requiredRole:
             spec_sample = "Protection"
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def priest(role_sample):
+    def priest(requiredRole):
         #spec_sample = ''
-        if "Healer" in role_sample:
+        if 'healer' in requiredRole:
             possible_spec = ['Holy', 'Discipline']
             spec_sample = random.choices(possible_spec)
-        elif "Ranged" in role_sample:
+        elif 'ranged' in requiredRole:
             spec_sample = "Shadow"
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def shaman(role_sample):
+    def shaman(requiredRole):
         #spec_sample = ''
-        if "Ranged" in role_sample:
+        if 'ranged' in requiredRole:
             spec_sample = "Elemental"
-        elif "Melee" in role_sample:
+        elif 'melee' in requiredRole:
             spec_sample = "Enhancement"
-        elif "Healer" in role_sample:
+        elif 'healer' in requiredRole:
             spec_sample = "Restoration"
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def rogue(role_sample):
+    def rogue(requiredRole):
         #spec_sample = ''
-        if "Melee" in role_sample:
+        if 'melee' in requiredRole:
             possible_spec = ['Assassination', 'Combat', 'Subtlety']
             spec_sample = random.choices(possible_spec)
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def hunter(role_sample):
+    def hunter(requiredRole):
         #spec_sample = ''
-        if "Ranged" in role_sample:
+        if 'ranged' in requiredRole:
             possible_spec = ['Marksmanship', 'Beast Mastery', 'Survival']
             spec_sample = random.choices(possible_spec)
         else:
             spec_sample = "Invalid!"
         return spec_sample
 
-    def warlock(role_sample):
+    def warlock(requiredRole):
         #spec_sample = ''
-        if "Ranged" in role_sample:
+        if 'ranged' in requiredRole:
             possible_spec = ['Affliction', 'Demonology', 'Destruction']
             spec_sample = random.choices(possible_spec)
         else:

@@ -36,8 +36,7 @@ class getClasses:
                         pass
             else:
                 pass
-        randClass = random.choices(classesOut)
-        return randClass[0]
+            
 
 
 #foo = ['getClass']
