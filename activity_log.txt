@@ -16,6 +16,9 @@ process 2
 >check match critera for expansion string against expansion list matches
 >output chosen expansion to var
 
+20230315 am
+working output to trail.txt from specListWrath from scratchpad, to get role count and validRole function Working
+
 20230212 pm
 # method is elegant but doesnt do what is needed
 # requiredRole>validClasses>random valid class > valid spec for class > output

@@ -3,10 +3,11 @@ import importlib
 import random
 
 #raidSize = int(input("number: "))
-raidSize = 40
+raidSize = 2
 expansionName = importlib.import_module("expac_selection").chooseExpansion.main()
 allRoles = ['tank', 'healer', 'melee', 'ranged']
-requiredRole = ['ranged'] #random.choices(allRoles)
+validRoles = [1, 1, 1, 1]
+requiredRole = random.choices(allRoles, weights = validRoles)
 print(requiredRole)
 
 class utility:
