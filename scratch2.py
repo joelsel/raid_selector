@@ -112,6 +112,8 @@ class pull_expac_spec:
             spec_sample = "Invalid!"
         return spec_sample
 '''
+
+'''
 raidSize = int(input("number: "))
 
 with open ('trial.txt', 'a') as f:
@@ -124,3 +126,62 @@ with open ('trial.txt', 'a') as f:
 
 
     
+'''
+'''
+from testLocal import test
+array = ['1', '2', '3']
+print(test.picker(array))
+'''
+
+checkList = [['list_test']]
+checkString = 'string_test'
+
+'''
+
+def makeString(getTerm):
+    if type(getTerm) == list:
+        temp = getTerm[0]
+        phrase = str(temp)
+    elif type(getTerm) == str:
+        phrase = getTerm
+    else:
+        phrase = "error"
+    return phrase
+
+def capAll(getString):
+    print(f"getString is {getString}")
+    rawTemp = str(getString).replace('_' ,' ')
+    tempWords = rawTemp.split()
+    readable = []
+    readableOut = []
+    for x in range(len(tempWords)):
+        readable.append(tempWords[x].capitalize())
+        readableOut = " ".join(readable)
+    return readableOut
+
+'''
+
+
+def makeReadable(getTerm):
+    hold = []
+    readableOut = []
+    if type(getTerm) == list:
+        #temp = getTerm[0]
+        phrase = str(getTerm[0]).lower()
+    elif type(getTerm) == str:
+        phrase = getTerm.lower()
+    else:
+        phrase = 'error'
+   # print(f"getString is {getString}")
+    #rawTemp = str(phrase).replace('_' ,' ')
+    #tempWords = rawTemp.split()
+    tempWords = (phrase.replace('_', ' ')).split()
+
+    for x in range(len(tempWords)):
+        hold.append(tempWords[x].capitalize())
+        readableOut = ' '.join(hold)
+    return readableOut
+
+
+print(makeReadable(checkList))
+print(makeReadable(checkString))

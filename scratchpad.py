@@ -3,20 +3,21 @@ import importlib
 import random
 
 #raidSize = int(input("number: "))
-raidSize = 2
+raidSize = 40
 expansionName = importlib.import_module("expac_selection").chooseExpansion.main()
 allRoles = ['tank', 'healer', 'melee', 'ranged']
-requiredRole = random.choices(allRoles)
+requiredRole = ['ranged'] #random.choices(allRoles)
 print(requiredRole)
 
 class utility:
-    def capAll(input):
-        temp = (input.replace("_", " ")).split()
-        readable = []
+    def makeReadable(getTerm):
+        hold = []
         readableOut = []
-        for x in range(len(temp)):
-            readable.append(temp[x].capitalize())
-            readableOut = " ".join(readable)
+
+        tempWords = (getTerm.replace('_', ' ')).split()
+        for x in range(len(tempWords)):
+            hold.append(tempWords[x].capitalize())
+            readableOut = " ".join(hold)
         return readableOut
 
 
@@ -34,9 +35,12 @@ def main(count, expansionName, requiredRole):
     print (f'return viable spec command is = {returnViableSpec}')
     viableSpec = (eval(returnViableSpec))
 
-    requiredRoleReadable = utility.capAll(requiredRole[0])
-    viableSpecReadable = utility.capAll(viableSpec)
-    viableClassReadable = utility.capAll(viableClass)
+    #returnSpecInit = f"importlib.import_module('{currentExpansion}').getSpec.__init__()"
+    #specInit = eval(returnSpecInit)
+
+    requiredRoleReadable = utility.makeReadable(requiredRole[0])
+    viableSpecReadable = utility.makeReadable(viableSpec)
+    viableClassReadable = utility.makeReadable(viableClass)
    
     lineOut = (f'\n{(count+1):<4}{requiredRoleReadable:_<10}{viableSpecReadable:-^15}{viableClassReadable:_>10}')
     print(requiredRoleReadable)
