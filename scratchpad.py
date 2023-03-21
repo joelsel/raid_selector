@@ -3,7 +3,7 @@ import importlib
 import random
 
 #raidSize = int(input("number: "))
-raidSize = 2
+raidSize = 25
 expansionName = importlib.import_module("expac_selection").chooseExpansion.main()
 allRoles = ['tank', 'healer', 'melee', 'ranged']
 validRoles = [1, 1, 1, 1]
